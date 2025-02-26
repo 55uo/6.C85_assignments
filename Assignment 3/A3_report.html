@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vis & Society Assignment 3</title>
+    <link
+      rel="stylesheet"
+      href="https://vis-society.github.io/assignments/report.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small>Assignment 3</small>
+        Visualization Critique & Redesign
+      </h1>
+
+      <p><strong>Yi Suo</strong> — <em>ssuo@mit.edu</em></p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Reading & Critique</h2>
+
+        <figure>
+          <img
+            src="https://vis-society.github.io/assets/imgs/covid-spiral.png"
+            alt=""
+          />
+        </figure>
+
+        <p>Insights about the data/visualization:</p>
+
+        <ul>
+          <li>
+            The spiral design effectively aligns the same months of different
+            years along the same half-axis, which makes it easier to compare
+            case trends across corresponding time periods. This design helps
+            users recognize patterns and seasonal recurrences more intuitively.
+          </li>
+          <li>
+            The visualization reveals that COVID-19 cases surge most
+            significantly in winter, particularly following the December
+            holidays. This suggests that factors such as increased indoor
+            gatherings and holiday travel contribute to higher transmission
+            rates, potentially overwhelming individual immunity and accelerating
+            the spread of the disease.
+          </li>
+          <li>
+            The widening spiral visually emphasizes the sharp increase in cases
+            from 2020 to 2022. This reinforces the impact of new variants,
+            changes in immunity levels, and shifting public health responses
+            over time.
+          </li>
+          <li>
+            The use of a 7-day moving average helps highlight broader trends by
+            reducing short-term volatility in case numbers. This makes it easier
+            to distinguish long-term waves from daily noise, allowing viewers to
+            focus on meaningful patterns rather than being distracted by
+            fluctuations in case reporting.
+          </li>
+        </ul>
+
+        <p>Design Critique:</p>
+
+        <ul>
+          <li>
+            This spiral visualization is visually striking and effectively
+            conveys the magnitude and recurrence of COVID-19 surges. However, it
+            has several drawbacks that limit its clarity and impact. The spiral
+            layout, while unique, lacks a sense of urgency that a public health
+            crisis demands. The soft red shading and smooth curves give the data
+            an artistic appearance rather than emphasizing the severity of the
+            outbreaks. Additionally, while the design highlights seasonal
+            trends, it sacrifices the ability to make direct comparisons of case
+            counts across different time periods. A standard line chart, for
+            instance, would offer a clearer and more intuitive view of peaks and
+            troughs over time.
+          </li>
+          <li>
+            Another issue is the distortion caused by the radial layout. Some
+            months appear stretched, making them seem longer or more significant
+            than others, which can mislead viewers about the duration and
+            intensity of each wave. This effect, combined with the lack of
+            numerical markers beyond the single 150K reference point, makes it
+            difficult to extract precise values. Adding labels for key peaks,
+            minima, or even additional reference lines could improve readability
+            and provide better context. While the spiral format effectively
+            emphasizes seasonality, a more traditional time-series chart would
+            likely offer more precise insights into the rate of increase and
+            decline for each wave, making it a better tool for data-driven
+            decision-making.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Visualization Sketches</h2>
+
+        <figure>
+          <img
+            src="sketches/line.jpg"
+            alt=""
+            style="width: 100%; height: auto"
+          />
+          <figcaption>
+            Layered line chart comparing COVID-19 trends across 2020-2022.
+          </figcaption>
+        </figure>
+
+        <p>Design Rationale for Sketch 1:</p>
+
+        <ul>
+          <li>
+            I went with a standard time-series line chart because it gives a
+            much clearer view of peaks and troughs over time. This directly
+            fixes the readability and comparability issues from the spiral
+            design, making it easier to track when cases were rising or falling.
+          </li>
+          <li>
+            Instead of mapping data along a warped radial path, I laid it out in
+            a way that maintains consistent spacing between months. This
+            eliminates the issue of distorted time perception while preserving
+            seasonality, making it much easier to compare year-over-year trends
+            without visual bias.
+          </li>
+          <li>
+            I also added annotations for key events, like the Omicron outbreak,
+            so it’s obvious when external factors contributed to major case
+            spikes. This helps restore the sense of urgency that was lost in the
+            spiral’s smooth curves—sudden surges now stand out, making it clear
+            when outbreaks were accelerating or slowing down.
+          </li>
+        </ul>
+
+        <figure>
+          <img
+            src="sketches/bar.jpg"
+            alt=""
+            style="width: 100%; height: auto"
+          />
+          <figcaption>
+            Bar chart grouping COVID-19 cases by season for 2020-2022.
+          </figcaption>
+        </figure>
+
+        <p>Design Rationale for Sketch 2:</p>
+
+        <ul>
+          <li>
+            I went for a bar chart because it simplifies year-over-year
+            comparisons while preserving the seasonal patterns seen in the
+            original spiral. By aggregating data into seasons, I removed the
+            noise of month-to-month fluctuations and instead focused on the
+            bigger picture: how outbreaks aligned with colder months and holiday
+            seasons.
+          </li>
+          <li>
+            I intentionally chose warm and cool colors to match the feel of each
+            season—cool blue for winter, fresh green for spring, warm orange for
+            summer, and earthy brown for fall. This not only makes the chart
+            visually appealing but also reinforces the seasonal groupings at a
+            glance, helping viewers intuitively associate trends with different
+            times of the year.
+          </li>
+          <li>
+            I added a partial outline around the 2022 bars to subtly separate
+            the seasons without breaking the overall flow of the graph. This
+            keeps things organized and makes it easier to read across different
+            seasons without bars blending into each other.
+          </li>
+        </ul>
+
+        <figure>
+          <img
+            src="sketches/heatmap.jpg"
+            alt=""
+            style="width: 100%; height: auto"
+          />
+          <figcaption>
+            Radial heatmap showing monthly COVID-19 cases across 2020-2022.
+          </figcaption>
+        </figure>
+
+        <p>Design Rationale for Sketch 3:</p>
+
+        <ul>
+          <li>
+            I wanted to keep the cyclical nature of COVID-19 waves but fix the
+            issues from the original spiral design. Instead of a continuous
+            curve, I structured the data into concentric rings, with each ring
+            representing a different year. This makes it easier to compare the
+            same months across different years without distortion, while still
+            emphasizing how outbreaks followed seasonal patterns.
+          </li>
+          <li>
+            The yellow-to-deep-red gradient effectively highlights case
+            severity, making major surges immediately visible. The structured
+            circular layout helps track recurring outbreaks, and the even
+            spacing of months ensures no single time period looks exaggerated.
+            The reference legend also helps translate color into case counts,
+            making the data more interpretable at a glance.
+          </li>
+          <li>
+            While the design successfully conveys seasonality, precise case
+            values are still hard to extract. Adding numerical labels or key
+            event annotations (like Omicron’s peak) could provide more context.
+            I’d also explore thicker gridlines or subtle radial guides to
+            further improve readability, and possibly test a logarithmic color
+            scale to better differentiate between moderate and extreme case
+            counts.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Final Visualization Design</h2>
+
+        <figure>
+          <img
+            src="sketches/final.png"
+            alt=""
+            style="width: 100%; height: auto"
+          />
+          <figcaption>
+            COVID-19 waves, deaths, and key pandemic milestones from 2020 to
+            2022, with seasonal trends and major events highlighted.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Design Process & Design Decisions</h2>
+
+        <p>
+          This final design came after multiple iterations where I tried to
+          balance clarity, seasonality, and meaningful context. I started off
+          with the spiral visualization, which was great for emphasizing the
+          cyclical nature of COVID-19 waves, but I quickly realized it distorted
+          time and made direct comparisons between waves difficult. I then
+          experimented with bar charts for seasonal aggregation and radial
+          heatmaps to keep the cyclical aspect while improving readability, but
+          those didn’t do a great job of showing the precise timing and scale of
+          case surges. Eventually, I landed on a time-series line and area chart
+          hybrid, which gives a clean, structured view while still preserving
+          big-picture insights.
+        </p>
+
+        <p>
+          The stacked area chart for new cases helps show the sheer scale and
+          duration of each wave, while the red line chart for new deaths makes
+          it easy to compare infection waves with their fatality impact. I also
+          wanted to bring back the seasonality aspect that got lost in standard
+          time-series charts, so I added subtle background shading for each
+          season, using colors that intuitively map to the time of year. This
+          helps reinforce the idea that certain seasons—especially winter—saw
+          repeated surges. Another big improvement was adding vertical reference
+          lines to mark major events like the first U.S. lockdown, vaccine
+          approvals, and major variant peaks. These provide much-needed context
+          for why some waves were more severe than others. I also used different
+          line styles to distinguish policy-related events from variant-driven
+          peaks, making it clear what type of event each reference line
+          represents.
+        </p>
+
+        <p>
+          Since raw daily case numbers can be pretty noisy, I used a 14-day
+          moving average to smooth things out and highlight longer-term trends.
+          I also paid close attention to the axis scales to make sure both cases
+          and deaths could be shown without one overshadowing the other—hence
+          the dual-axis setup, which makes it easier to see how deaths lag
+          behind case surges. The color scheme took a few tries to get right. I
+          originally considered using a simple diverging scale but ended up
+          layering gradients for seasonality while using bold, distinct colors
+          for reference lines to reinforce the key takeaways. The deep blue for
+          case trends keeps them visually dominant, while the red death trend is
+          clear without being overpowering. Looking at the final result, I think
+          this design does a solid job of balancing detail with readability,
+          making it both informative and easy to interpret.
+        </p>
+
+        <h3>Reflection</h3>
+
+        <p>
+          This final design successfully addresses many of the critiques I had
+          about the original spiral visualization while also revealing new
+          design challenges along the way. One of the biggest weaknesses of the
+          spiral was that it distorted time, making it difficult to directly
+          compare case counts across different waves. This time-series format
+          eliminates that issue by presenting trends in a structured, linear
+          way, allowing for much clearer comparisons between different periods.
+          The spiral also lacked clear contextual markers, which made it harder
+          to interpret why certain surges occurred. I resolved this by adding
+          vertical reference lines for major pandemic milestones, such as
+          lockdowns, vaccine rollouts, and variant peaks, providing a
+          much-needed link between policy interventions and case trends.
+          Additionally, the dual-axis setup improves readability, making it
+          easier to compare case surges and deaths without one overshadowing the
+          other.
+        </p>
+
+        <p>
+          However, working through this redesign process also reinforced that
+          some critiques are harder to fully resolve. One challenge was
+          maintaining the emphasis on seasonality without introducing
+          unnecessary complexity. The spiral format naturally conveyed
+          cyclicality, whereas a standard time-series chart does not. To address
+          this, I added seasonal shading in the background, but this also made
+          the chart look a bit busier than I originally intended. I experimented
+          with alternative ways to encode seasonality, such as separate seasonal
+          averages or statistical breakdowns, but these disrupted the overall
+          flow of the time-series design. This was the best balance I could find
+          between keeping the focus on trends while still showing the recurring
+          seasonal patterns. Another limitation is that while this version
+          improves precision, it still prioritizes trends over exact numerical
+          comparisons, meaning it might not be ideal for someone looking for
+          more statistical detail. Still, this process reinforced how every
+          design decision—whether it’s color, layout, annotations, or axis
+          formatting—shapes the way data is understood. In the end, while not
+          every critique could be perfectly addressed, this final version
+          significantly improves on the clarity, comparability, and contextual
+          depth that were missing in the earlier designs.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
