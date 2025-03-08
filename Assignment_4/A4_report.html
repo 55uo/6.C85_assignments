@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vis & Society Assignment 3</title>
+    <link
+      rel="stylesheet"
+      href="https://vis-society.github.io/assignments/report.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small>Assignment 4</small>
+        Persuasive or Deceptive Visualization?
+      </h1>
+
+      <p><strong>Yi Suo</strong> — <em>ssuo@mit.edu</em></p>
+    </header>
+
+    <main>
+      <h2>
+        Proposition: States with restrictive abortion laws correlate with lower
+        in-state abortion rates
+      </h2>
+
+      <section>
+        <h3>FOR the Proposition</h3>
+
+        <figure>
+          <img src="plots/map.png" alt="" style="width: 100%; height: auto" />
+          <figcaption>
+            Map showing the geographic distribution of abortion policy
+            restrictiveness.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="plots/pro.png" alt="" style="width: 100%; height: auto" />
+          <figcaption>
+            Bar chart showing that states with more restrictive policies tend to
+            have lower average in‐state abortion rates.
+          </figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li>
+            <strong
+              >Creating a Restrictiveness Index and Grouping into Percentiles
+              (Score: +2):</strong
+            >
+            I identified five key factors that impact access to abortion clinics
+            (e.g., clinic closures, provider density, travel rates), normalized
+            these measures, and then computed a weighted average to form an
+            access restrictiveness index. I divided this index into eight
+            percentile groups, from “Most Accessible” to “Most Restrictive”, to
+            capture subtle differences across states. This decision is
+            data-driven and transparent, which makes my visualization persuasive
+            because it reflects a nuanced understanding of policy impacts. I
+            considered using fewer groups, but settling on eight allowed for a
+            more detailed narrative.
+          </li>
+          <li>
+            <strong
+              >Filtering Out Outliers That Contradicted the Trend (Score:
+              -1):</strong
+            >
+            I decided to filter out some outlier states in the bar chart that
+            didn’t follow the overall trend of lower in‐state abortion rates
+            with increased restrictiveness. This made the downward trend much
+            clearer and strengthened the persuasive message of my visualization.
+            While this approach does omit some valid data points, I weighed the
+            alternative of including every data point and found that doing so
+            would have muddled the pattern I was trying to illustrate. I
+            acknowledge that this choice is a bit deceptive, but it was
+            necessary to create a more compelling narrative.
+          </li>
+          <li>
+            <strong>Title Implication of a “Divide” (Score: +0.5):</strong>
+            I opted for a title that subtly hints at a “geographic divide,”
+            linking clusters of policies (for example, a more restrictive South)
+            to the observed outcomes without directly claiming causation. This
+            decision helps make my visualization persuasive by drawing attention
+            to regional differences while staying technically accurate. I
+            considered a neutral title like “Policy Distribution by State,” but
+            that alternative would have lacked the persuasive impact I was
+            aiming for.
+          </li>
+          <li>
+            <strong>Color Choices (Score: +0.5):</strong>
+            I selected a red-to-blue gradient for the map visualization to
+            differentiate levels of policy restrictiveness. Using red to
+            indicate more restrictive policies and blue for more accessible ones
+            leverages familiar political color associations, making the map
+            immediately understandable and persuasive. This approach worked well
+            in drawing attention and providing clarity, though I acknowledge
+            that these colors may also evoke certain emotional responses. I
+            considered a neutral, single-hue palette, but the red-to-blue scheme
+            was ultimately more effective at communicating the intended message.
+          </li>
+
+          <li>
+            <strong
+              >Averaging Rates Without Weighting by Population (Score:
+              -1.5):</strong
+            >
+            I calculated average in‐state abortion rates without adjusting for
+            state population sizes. This decision means that small states with
+            extreme values (like Wyoming) can disproportionately affect the
+            averages, reinforcing the narrative that restrictiveness correlates
+            with lower in‐state abortion rates. Although using weighted averages
+            would have offered a more balanced view, I chose the unweighted
+            method because it better supports the persuasive argument I was
+            making, despite its limitations.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>AGAINST the Proposition</h3>
+
+        <figure>
+          <img src="plots/ang.jpg" alt="" style="width: 100%; height: auto" />
+          <figcaption>
+            Restrictive States Rely More on Out-of-State Abortion Access (2020).
+          </figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <li>
+          <strong
+            >Using 100% Stacked Bars to Emphasize Proportional Dependency
+            (Score: -1):</strong
+          >
+          I chose a 100% stacked bar chart to illustrate the proportion of
+          in-state versus out-of-state abortions, thereby spotlighting how much
+          each group relies on external access. By adding the absolute counts
+          for each segment, I reinforce the point that states in more
+          restrictive categories aren’t necessarily experiencing fewer total
+          abortions—they’re just pushing them elsewhere. I considered using a
+          dual-axis chart (counts plus proportions), but that would have been
+          more complex and less direct in conveying the argument that
+          restrictiveness shifts, rather than reduces, abortions.
+        </li>
+        <li>
+          <strong>Weighted Averages for Out-of-State % (Score: +2):</strong>
+          I applied a weighting scheme based on each group’s total abortion
+          volume so that populous states (e.g., Texas) carry more influence than
+          smaller states (e.g., Wyoming). This approach offers a more realistic
+          depiction of the broader impact, making the argument more convincing:
+          when large states have higher out-of-state percentages, it’s a clear
+          sign of displacement. I considered using simple averages, but that
+          would let small outlier states skew the results.
+        </li>
+        <li>
+          <strong
+            >Low-Contrast Color Encoding for Out-of-State Segments (Score:
+            -0.5):</strong
+          >
+          I opted for a subdued purple shade for out-of-state abortions, which
+          slightly underplays their prominence. While this choice helps keep the
+          visualization from feeling too confrontational, it also risks
+          diminishing the apparent magnitude of out-of-state reliance. I briefly
+          considered a bold, contrasting palette but felt it might overshadow
+          the data, so I stuck with a softer approach that still highlights the
+          displacement narrative.
+        </li>
+        <li>
+          <strong
+            >Title Framing (“Rely More”) to Undermine the Proposition (Score:
+            +1):</strong
+          >
+          I used the phrase “Rely More” in the title to shift the interpretation
+          from “restrictive laws reduce abortions” to “restrictive laws push
+          abortions out of state.” This directly challenges the idea that fewer
+          in-state procedures indicate fewer overall abortions, instead
+          suggesting that people are simply forced to seek services elsewhere. A
+          neutral title like “Out-of-State Abortion Rates” would have been less
+          persuasive for an against-the-proposition viewpoint.
+        </li>
+        <li>
+          <strong
+            >Ordering Groups from Most to Least Restrictive (Score:
+            +1.5):</strong
+          >
+          I arranged the bars so that groups become more restrictive from left
+          to right, creating a clear progression showing how out-of-state
+          reliance increases with policy stringency. This mirrors the layout of
+          the pro visualization, making it easy to compare how the same data can
+          support an opposing argument. I considered sorting by total abortion
+          volume, but decided that emphasizing restrictiveness directly was more
+          impactful for highlighting the displacement effect.
+        </li>
+      </section>
+
+      <section>
+        <h2>Final Reflection</h2>
+
+        <p>
+          Throughout this process, the initial step of identifying key data
+          points, such as in-state versus out-of-state abortions and the factors
+          that contribute to the restrictiveness index, seemed clear at first,
+          even though the dataset didn’t explicitly provide these figures. I
+          invested a significant amount of time working through calculations and
+          mathematical formulations to derive the necessary metrics. In
+          contrast, striking the right balance between persuasion and honesty
+          proved much more challenging. I quickly assembled the pro chart, but
+          when I turned to the against chart, every calculation I attempted
+          still supported the original proposition. To overcome this, I shifted
+          my perspective and subtly redirected the audience’s attention to a
+          related narrative, one that emphasizes how restrictive policies
+          displace abortions rather than reduce overall demand.
+        </p>
+        <p>
+          Decisions like filtering out outliers, selecting specific color
+          schemes, and framing titles with emotive language pushed the
+          boundaries of what felt like a fair representation of the data. I was
+          surprised by how a minor tweak, such as removing just a few outlier
+          states, could radically alter the perceived trend. I also dedicated
+          significant effort to refining the title and color scheme to ensure
+          the focus shifted appropriately. This experience underscored how even
+          small design choices can powerfully shape a narrative.
+        </p>
+        <p>
+          I now define “ethical analysis and visualization” as the practice of
+          being transparent about design decisions and fully acknowledging their
+          impact on the audience’s interpretation. There is a fine line between
+          acceptable persuasive choices, such as emphasizing a particular trend
+          with a clear, data-backed rationale, and misleading ones, like
+          distorting axes or omitting significant contradictory data without
+          explanation. In my view, an acceptable approach conveys the data’s
+          fundamental truth, while a misleading one obscures it. Ultimately,
+          acknowledging and documenting the motivations behind each design
+          decision is essential for maintaining ethical standards, even when the
+          objective is to persuade.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
